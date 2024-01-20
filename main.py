@@ -18,15 +18,15 @@ def number(n):
     if n%2 == 0:
         result = {
             "Number":n,
-            "OddOrEven":"True"
+            "OddOrEven":"Even"
         }
     else:
         result = {
             "Number":n,
-            "OddOrEven":"False"
+            "OddOrEven":"Odd"
         }
     return jsonify(result)
 
 
 if __name__=='__main__':
-    app.run(port=int("3000"),debug=True)
+    app.run(host='0.0.0.0',debug=True)
